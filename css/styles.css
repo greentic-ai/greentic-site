@@ -1,0 +1,36 @@
+
+/* Basic design tokens */
+:root{
+  --green:#17B169;
+  --dark:#0B1221;
+}
+html:focus-within { scroll-behavior: smooth; }
+.skip-link{position:absolute;left:-9999px}
+.skip-link:focus{left:8px;top:8px;z-index:1000;background:#fff;padding:.5rem 1rem;border-radius:.5rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:9999px;padding:.6rem 1rem;border:1px solid transparent;transition:transform .1s ease, box-shadow .2s ease}
+.btn:focus{outline:2px solid #22D3EE;outline-offset:2px}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--green);color:#fff}
+.btn-ghost{background:transparent;border-color:#e5e7eb;color:#111827}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:1rem;padding:1rem}
+.card-title{font-weight:700;margin-bottom:.25rem}
+.section-title{font-size:1.875rem;line-height:2.25rem;font-weight:800;color:#0B1221}
+.pill{border:1px solid #e5e7eb;border-radius:9999px;padding:.5rem 1rem;background:#fff;text-align:center}
+.stat{font-size:1.5rem;font-weight:800;color:#0B1221}
+.counter{counter-reset:step}
+.step{position:relative;padding-left:2.5rem;background:#fff;border:1px solid #e5e7eb;border-radius:.75rem;padding:.75rem}
+.step::before{counter-increment:step;content:counter(step);position:absolute;left:.5rem;top:.5rem;background:#0B1221;color:#fff;border-radius:.5rem;width:1.5rem;height:1.5rem;display:inline-flex;align-items:center;justify-content:center;font-size:.75rem}
+.tabs{display:flex;gap:.5rem;margin-top:1rem}
+.tab{padding:.4rem .75rem;border-radius:.5rem;border:1px solid #e5e7eb;background:#fff}
+.tab.active{background:var(--green);color:#fff;border-color:transparent}
+.tab-panels pre{background:#0B1221;color:#e5e7eb;padding:1rem;border-radius:.75rem;overflow:auto}
+.hidden{display:none}
+.accordion .accordion-trigger{display:block;width:100%;text-align:left;padding:.75rem 1rem;border:1px solid #e5e7eb;background:#fff;border-radius:.75rem;margin-top:.5rem}
+.accordion .accordion-panel{display:none;padding:1rem;border-left:4px solid var(--green);background:#fff}
+.input{display:block;width:100%;padding:.6rem .8rem;border:1px solid #e5e7eb;border-radius:.75rem;background:#fff}
+.th, .td{padding:.75rem 1rem;border-bottom:1px solid #e5e7eb;text-align:left}
+.carousel{overflow:hidden}
+.carousel-track{display:flex;gap:1rem;animation:slide 24s linear infinite}
+.carousel-card{min-width:240px;background:#fff;border:1px solid #e5e7eb;border-radius:1rem;padding:1rem}
+@keyframes slide{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+#cookie-banner.hidden{display:none}
