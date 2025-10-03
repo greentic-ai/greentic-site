@@ -164,12 +164,12 @@ const Index = () => {
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <UseCaseCard
-              title="Telecom AI Assistant"
-              description="Network monitoring assistant that autonomously spawns specialized sub-workers for diagnostics, alerts, and incident response—scaling instantly to handle infrastructure complexity."
+              title="Customer Support AI Assistant"
+              description="Customer support assistant which allows customers to get price quotes, schedule visits/work, get answers to product queries and more."
             />
             <UseCaseCard
-              title="Healthcare Operations"
-              description="Patient intake assistant that deploys specialized workers for insurance verification, clinical documentation, and care coordination—reducing administrative burden by 80%."
+              title="Enterprise Orchestration Automation"
+              description="Use Teams or Slack and talk to digital workers as if they were co-workers to get repetitive tasks done in record time."
             />
             <UseCaseCard
               title="Startup Growth Engine"
