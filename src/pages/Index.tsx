@@ -9,6 +9,7 @@ import heroBg from "@/assets/hero-bg.png";
 import maartenImage from "@/assets/maarten-ectors.png";
 import rahulImage from "@/assets/rahul-patel.png";
 import greenticLogo from "@/assets/greentic-logo.png";
+import telegramWeatherGif from "@/assets/telegram-weather-bot.gif";
 
 const Index = () => {
   return (
@@ -170,7 +171,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
             <div className="order-2 md:order-1">
               <img 
-                src="https://greentic.ai/assets/telegram-weather-bot.gif" 
+                src={telegramWeatherGif} 
                 alt="Telegram Weather Bot demo showing channel integration with weather API via MCP"
                 loading="lazy"
                 className="rounded-2xl shadow-lg w-full max-w-lg mx-auto border border-border"
