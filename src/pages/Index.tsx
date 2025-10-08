@@ -193,10 +193,10 @@ const Index = () => {
                 manual intervention.
               </p>
               <Button size="lg" className="bg-gradient-to-r from-primary to-primary-glow hover:opacity-90" asChild>
-                <a target="_blank" href="https://www.waitlistr.com/lists/809ac97a/greentic-ai-waiting-list?ref=lnk">
-                  Try it later - Join Waitlist
+                <Link to="/docs">
+                  Try it now
                   <ArrowRight className="ml-2 w-5 h-5" />
-                </a>
+                </Link>
               </Button>
             </div>
           </div>
