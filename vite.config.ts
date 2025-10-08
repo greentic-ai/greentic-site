@@ -4,6 +4,16 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ command }) => ({
-  base: command === 'serve' ? '/' : '/greentic-site/',  // dev vs build
-}))
+export default defineConfig(({ command }) => {
+  const isServe = command === "serve";
+
+  return {
+    base: isServe ? "/" : "./",
+    plugins: [react(), componentTagger()],
+    resolve: {
+      alias: {
+        "@": path.resolve(process.cwd(), "src"),
+      },
+    },
+  };
+});
