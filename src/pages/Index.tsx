@@ -3,7 +3,8 @@ import { Input } from "@/components/ui/input";
 import { FeatureCard } from "@/components/FeatureCard";
 import { TeamMember } from "@/components/TeamMember";
 import { UseCaseCard } from "@/components/UseCaseCard";
-import { Github, Workflow, Plug, Shield, Store, Code, Mail, ArrowRight, Sparkles } from "lucide-react";
+import { Github, Workflow, Plug, Shield, Store, Code, Mail, ArrowRight, Sparkles, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.png";
 import maartenImage from "@/assets/maarten-ectors.png";
 import rahulImage from "@/assets/rahul-patel.png";
@@ -39,13 +40,17 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-              <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-primary-glow hover:opacity-90 transition-opacity shadow-lg">
-                Join the Waitlist
-                <ArrowRight className="ml-2 w-5 h-5" />
+              <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-primary-glow hover:opacity-90 transition-opacity shadow-lg" asChild>
+                <a target="_blank" href="https://www.waitlistr.com/lists/809ac97a/greentic-ai-waiting-list?ref=lnk">
+                  Join the Waitlist
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </a>
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-2">
-                <Github className="mr-2 w-5 h-5" />
-                View on GitHub
+              <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-2" asChild>
+                <a href="https://github.com/greentic-ai/greentic" target="_blank" rel="noopener noreferrer">
+                  <Github className="mr-2 w-5 h-5" />
+                  View on GitHub
+                </a>
               </Button>
             </div>
           </div>
@@ -150,6 +155,54 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Demo Section */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+              Live Demo: Telegram Weather Bot
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              See Greentic in action with a real-world integration
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
+            <div className="order-2 md:order-1">
+              <img 
+                src="https://greentic.ai/assets/telegram-weather-bot.gif" 
+                alt="Telegram Weather Bot demo showing channel integration with weather API via MCP"
+                loading="lazy"
+                className="rounded-2xl shadow-lg w-full max-w-lg mx-auto border border-border"
+              />
+              <p className="text-center text-sm text-muted-foreground mt-4">
+                Telegram channel + Weather API (MCP)
+              </p>
+            </div>
+            
+            <div className="order-1 md:order-2 space-y-6">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                This bot demonstrates Greentic's channel and tool architecture in action. 
+                When a user sends a message to the Telegram channel asking for weather information, 
+                Greentic routes the request through MCP (Model Context Protocol) to the weather tool, 
+                fetches live weather data for the requested location, and replies directly in the chat.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                This illustrates how digital workers can seamlessly connect communication channels 
+                with external tools and APIs, enabling intelligent, context-aware automation without 
+                manual intervention.
+              </p>
+              <Button size="lg" className="bg-gradient-to-r from-primary to-primary-glow hover:opacity-90" asChild>
+                <a target="_blank" href="https://www.waitlistr.com/lists/809ac97a/greentic-ai-waiting-list?ref=lnk">
+                  Try it later - Join Waitlist
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Use Cases Section */}
       <section className="py-24 bg-secondary/50">
         <div className="container mx-auto px-6">
@@ -164,12 +217,12 @@ const Index = () => {
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <UseCaseCard
-              title="Customer Support AI Assistant"
-              description="Customer support assistant which allows customers to get price quotes, schedule visits/work, get answers to product queries and more."
+              title="Telecom AI Assistant"
+              description="Network monitoring assistant that autonomously spawns specialized sub-workers for diagnostics, alerts, and incident response—scaling instantly to handle infrastructure complexity."
             />
             <UseCaseCard
-              title="Enterprise Orchestration Automation"
-              description="Use Teams or Slack and talk to digital workers as if they were co-workers to get repetitive tasks done in record time."
+              title="Healthcare Operations"
+              description="Patient intake assistant that deploys specialized workers for insurance verification, clinical documentation, and care coordination—reducing administrative burden by 80%."
             />
             <UseCaseCard
               title="Startup Growth Engine"
@@ -285,34 +338,41 @@ const Index = () => {
               Join our community and be part of the agentic revolution
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <Input 
-                type="email" 
-                placeholder="Enter your email" 
-                className="text-lg py-6"
-              />
-              <Button size="lg" className="bg-gradient-to-r from-primary to-primary-glow hover:opacity-90">
+            <Button size="lg" className="bg-gradient-to-r from-primary to-primary-glow hover:opacity-90 text-lg px-8 py-6" asChild>
+              <a href="https://medium.com/@greentic-ai" target="_blank" rel="noopener noreferrer">
                 <Mail className="mr-2 w-5 h-5" />
-                Subscribe
-              </Button>
-            </div>
+                Follow on Medium
+              </a>
+            </Button>
             
             <div className="flex justify-center gap-4 pt-4">
-              <Button variant="outline" size="lg">
-                <Github className="mr-2 w-5 h-5" />
-                GitHub
+              <Button variant="outline" size="lg" asChild>
+                <a href="https://github.com/greentic-ai/greentic" target="_blank" rel="noopener noreferrer" aria-label="Greentic on GitHub">
+                  <Github className="mr-2 w-5 h-5" />
+                  GitHub
+                </a>
               </Button>
-              <Button variant="outline" size="lg">
-                Discord
+              <Button variant="outline" size="lg" asChild>
+                <a href="https://x.com/greentic_ai" target="_blank" rel="noopener noreferrer" aria-label="Greentic on X">
+                  <svg className="mr-2 w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                  X
+                </a>
               </Button>
-              <Button variant="outline" size="lg">
-                LinkedIn
+              <Button variant="outline" size="lg" asChild>
+                <a href="https://www.linkedin.com/company/greentic-ai/about/" target="_blank" rel="noopener noreferrer" aria-label="Greentic on LinkedIn">
+                  <Linkedin className="mr-2 w-5 h-5" />
+                  LinkedIn
+                </a>
               </Button>
             </div>
             
-            <Button size="lg" className="mt-4 bg-gradient-to-r from-primary to-primary-glow hover:opacity-90">
-              Join Early Access
-              <ArrowRight className="ml-2 w-5 h-5" />
+            <Button size="lg" className="mt-4 bg-gradient-to-r from-primary to-primary-glow hover:opacity-90" asChild>
+              <a target="_blank" href="https://www.waitlistr.com/lists/809ac97a/greentic-ai-waiting-list?ref=lnk">
+                Join Early Access
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
             </Button>
           </div>
         </div>
@@ -335,10 +395,10 @@ const Index = () => {
             </div>
             
             <div className="flex gap-8 text-muted-foreground">
-              <a href="https://github.com/greentic-ai/greentic/tree/main/docs" className="hover:text-primary transition-colors">Docs</a>
-              <a href="https://github.com/greentic-ai/greentic" className="hover:text-primary transition-colors">GitHub</a>
-              <a href="#" className="hover:text-primary transition-colors">Privacy</a>
-              <a href="#" className="hover:text-primary transition-colors">Terms</a>
+              <Link to="/docs" className="hover:text-primary transition-colors">Docs</Link>
+              <a href="https://github.com/greentic-ai/greentic" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">GitHub</a>
+              <Link to="/privacy" className="hover:text-primary transition-colors">Privacy</Link>
+              <Link to="/terms" className="hover:text-primary transition-colors">Terms</Link>
             </div>
           </div>
           
