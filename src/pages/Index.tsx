@@ -29,15 +29,12 @@ const Index = () => {
         <div className="relative container mx-auto px-6 py-24 md:py-32">
           <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
-              Digital Workers That Execute Boring Tasks —{" "}
-              <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-                Fast, Secure, Extensible
-              </span>
+              Digital workers that execute repetitive operational work across enterprise systems
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Greentic is building the future of digital workers — where agents can generate, 
-              manage, and collaborate with each other.
+              Greentic is an open-core platform for building and running governed AI workflows (digital workers) that connect to business tools, follow rules, and produce auditable outcomes.
+              For: business, IT, operations, and support teams in mid-market and enterprise organisations.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
@@ -48,7 +45,7 @@ const Index = () => {
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-2" asChild>
-                <a href="https://github.com/greentic-ai/greentic" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/greentic-ai/greentic-dev" target="_blank" rel="noopener noreferrer">
                   <Github className="mr-2 w-5 h-5" />
                   View on GitHub
                 </a>
@@ -314,16 +311,32 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            <TeamMember
-              name="Maarten Ectors"
-              role="Multi-award winning innovator in tech, AI, telecom, cloud & security"
-              image={maartenImage}
-            />
-            <TeamMember
-              name="Rahul Patel"
-              role="Enterprise Sales Executive Expert in go-to-market & enterprise adoption"
-              image={rahulImage}
-            />
+            <a
+              href="https://linkedin.com/in/mectors"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+              aria-label="Maarten Ectors on LinkedIn"
+            >
+              <TeamMember
+                name="Maarten Ectors"
+                role="Multi-award winning innovator in tech, AI, telecom, cloud & security"
+                image={maartenImage}
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/rahulscircle/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+              aria-label="Rahul Patel on LinkedIn"
+            >
+              <TeamMember
+                name="Rahul Patel"
+                role="Enterprise Sales Executive Expert in go-to-market & enterprise adoption"
+                image={rahulImage}
+              />
+            </a>
           </div>
         </div>
       </section>
@@ -404,7 +417,7 @@ const Index = () => {
           </div>
           
           <div className="mt-8 pt-8 border-t border-border text-center text-muted-foreground">
-            <p>© 2025 Greentic.ai. Building the future of digital workers.</p>
+            <p>© 2025 Greentic AI Ltd - UK Company number: 16820640.  Building the future of digital workers. </p>
           </div>
         </div>
       </footer>
